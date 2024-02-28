@@ -14,8 +14,7 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - name: Build the hello-docker Docker image
+      - name: Build the cribl-plus Docker image
         run: |
           docker build . --tag ghcr.io/pdugas/cribl-plus:latest
-          docker run ghcr.io/pdugas/cribl-plus:latest
           docker push ghcr.io/pdugas/cribl-plus:latest
